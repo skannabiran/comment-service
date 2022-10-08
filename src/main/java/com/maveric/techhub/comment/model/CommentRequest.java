@@ -4,6 +4,7 @@ import com.maveric.techhub.comment.util.ServiceConstants;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 @Data
 public class CommentRequest {
@@ -15,6 +16,7 @@ public class CommentRequest {
     @NotBlank(message = ServiceConstants.TYPE_ID_IS_MANDATORY)
     private String typeId;
     @NotBlank(message = ServiceConstants.TYPE_IS_MANDATORY)
+    @Pattern(regexp = ("Idea|Like"), message="type must be Idea or Like")
     private String type;
 
 }
