@@ -16,7 +16,7 @@ public class CommentRequest {
     @NotBlank(message = ServiceConstants.TYPE_ID_IS_MANDATORY)
     private String typeId;
     @NotBlank(message = ServiceConstants.TYPE_IS_MANDATORY)
-    @Pattern(regexp = ("Idea|Like"), message="type must be Idea or Like")
+    @Pattern(regexp = ("Idea|Project"), message=ServiceConstants.IDEA_OR_PROJECT)
     private String type;
 
 }
